@@ -1,4 +1,3 @@
-
 class MenuFood {
   String nama;
   int harga;
@@ -7,17 +6,14 @@ class MenuFood {
   MenuFood(this.nama, this.harga, this.tersedia);
 
   void tampilkanInfo() {
-   
-    String statusTersedia = tersedia ? "Ya" : "Tidak";
-
     print("=== MENU FOOD ===");
     print("Nama      : $nama");
     print("Harga     : Rp$harga");
-    print("Tersedia  : $statusTersedia");
+    print("Tersedia  : ${tersedia ? 'Ya' : 'Tidak'}");
   }
 }
 
 void main() {
-  MenuFood menuNasiGoreng = MenuFood("Nasi Goreng", 15000, true);
-  menuNasiGoreng.tampilkanInfo();
+  MenuFood menu = MenuFood("Nasi Goreng", 15000, true);
+  menu.tampilkanInfo();
 }
